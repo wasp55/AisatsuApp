@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void showTimePickerDialog() {
         TimePickerDialog timePickerDialog = new TimePickerDialog(this,
                 new TimePickerDialog.OnTimeSetListener() {
+
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 
                         int time1 = hourOfDay;
-                        int time2 = minute;
                         if ((time1 >= 2) && (time1 <= 9)) {
                             mGreeting.setText("おはよう");
                         } else if ((time1 >= 10) && (time1 <= 17)) {
@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         } else if ((time1 >= 18) || (time1 <= 2)) {
                             mGreeting.setText("こんばんわ");
                         }
-
                     }
                 },
                 0,// 初期値（時間）
